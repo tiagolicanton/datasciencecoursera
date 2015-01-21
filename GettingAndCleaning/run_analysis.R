@@ -30,20 +30,20 @@ run_analysis <- function() {
     merged_data <- cbind(Activity, subject)
     colnames(merged_data) <- c("Activity","Subject")
     
-    len = nrow(features)
+    len <- nrow(features)
     f_chr <- as.character(features$V2)
     col_name <- as.character(features$V1)
-    f_chr = gsub("BodyBody","Body",f_chr)
-    f_chr = gsub("\\(\\)","",f_chr)
-    f_chr = gsub("\\(","_",f_chr)
-    f_chr = gsub("\\)","_",f_chr)
-    f_chr = gsub("\\-","_",f_chr)
+    f_chr <- gsub("BodyBody","Body",f_chr)
+    f_chr <- gsub("\\(\\)","",f_chr)
+    f_chr <- gsub("\\(","_",f_chr)
+    f_chr <- gsub("\\)","_",f_chr)
+    f_chr <- gsub("\\-","_",f_chr)
     
     #2. extract only std and mean measurements to the new dataset
     
     for (i in 1:len) {
         if (length(grep('mean',f_chr[i],ignore.case=TRUE)>0) || length(grep('std',f_chr[i],ignore.case=TRUE))>0) {
-            name = paste('V',col_name[i],sep="")
+            name <- paste('V',col_name[i],sep="")
             merged_data[f_chr[i]] = X[name] 
         }
     }
