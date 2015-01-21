@@ -24,11 +24,11 @@ run_analysis <- function() {
     #1. merge data to a new dataset 
     
     X <- rbind(X_test,X_train)
-    Activity = rbind(y_test,y_train)
+    Activity <- rbind(y_test,y_train)
     subject <- rbind(subject_test,subject_train)
     
-    merged_data = cbind(Activity, subject)
-    colnames(merged_data) = c("Activity","Subject")
+    merged_data <- cbind(Activity, subject)
+    colnames(merged_data) <- c("Activity","Subject")
     
     len = nrow(features)
     f_chr <- as.character(features$V2)
@@ -46,9 +46,9 @@ run_analysis <- function() {
     
     #3. use descriptive activity names to name activities in the dataset
     
-    len = nrow(merged_data)
+    len <- nrow(merged_data)
     for (i in 1:len){
-        merged_data[i,1] = as.character(activity_labels[merged_data[i,1],2])
+        merged_data[i,1] <- as.character(activity_labels[merged_data[i,1],2])
     }
     
     #4. variable names are actually appropriately assigned in step 1-3
@@ -57,11 +57,11 @@ run_analysis <- function() {
     print(names(merged_data))
         
     
-    #4. create a second, independent tidy dataset with the average of each variable for each activity and each subject
+    #5. create a second, independent tidy dataset with the average of each variable for each activity and each subject
     
-    new_data = ddply(merged_data, .(Activity,Subject), numcolwise(mean))
+    new_data <- ddply(merged_data, .(Activity,Subject), numcolwise(mean))
     
-    write.table(data,'./newdata.txt',row.names=FALSE)
+    #write.table(data,'./newdata.txt',row.names=FALSE)
     
     new_data
 
