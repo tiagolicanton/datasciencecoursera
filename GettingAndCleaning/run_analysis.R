@@ -33,6 +33,7 @@ run_analysis <- function() {
     len = nrow(features)
     f_chr <- as.character(features$V2)
     col_name <- as.character(features$V1)
+    f_chr = gsub("BodyBody","Body",f_chr)
     f_chr = gsub("\\(\\)","",f_chr)
     f_chr = gsub("\\(","_",f_chr)
     f_chr = gsub("\\)","_",f_chr)
