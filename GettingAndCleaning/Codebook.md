@@ -250,31 +250,31 @@ Code book - Human Activity
 ### fBodyAccMag_meanFreq
 - [-1,1] .Mean of fBodyAccMag_meanFreq for each combination of Activity and Subject
 
-### fBodyBodyAccJerkMag_mean
+### fBodyAccJerkMag_mean
 - [-1,1] .Mean of fBodyBodyAccJerkMag_mean for each combination of Activity and Subject
 
-### fBodyBodyAccJerkMag_std
+### fBodyAccJerkMag_std
 - [-1,1] .Mean of fBodyBodyAccJerkMag_std for each combination of Activity and Subject
 
-### fBodyBodyAccJerkMag_meanFreq
+### fBodyAccJerkMag_meanFreq
 - [-1,1] .Mean of fBodyBodyAccJerkMag_meanFreq for each combination of Activity and Subject
 
-### fBodyBodyGyroMag_mean
+### fBodyGyroMag_mean
 - [-1,1] .Mean of fBodyBodyGyroMag_mean for each combination of Activity and Subject
 
-### fBodyBodyGyroMag_std
+### fBodyGyroMag_std
 - [-1,1] .Mean of fBodyBodyGyroMag_std for each combination of Activity and Subject
 
-### fBodyBodyGyroMag_meanFreq
+### fBodyGyroMag_meanFreq
 - [-1,1] .Mean of fBodyBodyGyroMag_meanFreq for each combination of Activity and Subject
 
-### fBodyBodyGyroJerkMag_mean
+### fBodyGyroJerkMag_mean
 - [-1,1] .Mean of fBodyBodyGyroJerkMag_mean for each combination of Activity and Subject
 
-### fBodyBodyGyroJerkMag_std
+### fBodyGyroJerkMag_std
 - [-1,1] .Mean of fBodyBodyGyroJerkMag_std for each combination of Activity and Subject
 
-### fBodyBodyGyroJerkMag_meanFreq
+### fBodyGyroJerkMag_meanFreq
 - [-1,1] .Mean of fBodyBodyGyroJerkMag_meanFreq for each combination of Activity and Subject
 
 ### angle_tBodyAccMean,gravity_
